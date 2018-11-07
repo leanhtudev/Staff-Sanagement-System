@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center mb-4">Staff Management</h1>
+
+        <div class="row">
+            <div class="col-md-3">
+                <h1 class="text-center" id="titleHeader">Staff Register</h1>
+                <div class="form-group">
+                    <input type="text" name="" id="txtId" class="form-control input-sm" placeholder="Enter employee's id">
+                    <span id="tbInput" class="text-red"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" id="txtName" class="form-control input-sm" placeholder="Enter employee's name">
+                    <span id="tbName" class="text-red"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="" id="txtEmail" class="form-control input-sm" placeholder="Enter employee's email">
+                    <span id="tbEmail" class="text-red"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" id="txtPhone" class="form-control input-sm" placeholder="Enter employee's phone number">
+                    <span id="tbPhone" class="text-red"></span>
+                </div>
+                <div class="form-group">
+                    <input type="date" name="" id="txtDOB" class="form-control input-sm" placeholder="Enter employee's DOB">
+                    <span id="tbDOB" class="text-red"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" id="txtSalary" class="form-control input-sm" placeholder="Enter employee's basic salary">
+                    <span id="tbSalary" class="text-red"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" id="txtDays" class="form-control input-sm" placeholder="Enter employee's working day">
+                    <span id="tbDays" class="text-red"></span>
+                </div>
+                <div class="form-group">
+                    <select name="" id="txtTitle" style="width:100%" class="form-control">
+                        <option value="0">Title</option>
+                        <option value="1">Boss</option>
+                        <option value="2">Manager</option>
+                        <option value="3">Staff</option>
+                    </select>
+                    <span id="tbTitle" class="text-red"></span>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="" id="txtExtra" class="form-control input-sm" placeholder="Extra money">
+                    <span id="tbExtra" class="text-red"></span>
+                </div>
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-success " id="btnAddEmployee">Add Employee</button>
+                    <button type="button" class="btn btn-warning " id="btnEditEmployee" style="display:none">Update
+                        Employee</button>
+                </div>
+            </div>
+            <div class="col-md-9 tableDiv">
+                <h1 class="text-center" id="tableTitle">Staff Infomation</h1>
+                <div class="form-group">
+                    <input type="text" name="" id="searchInput" class="form-control" placeholder="Find by id or name">
+                </div>
+                <div class="form-group">
+
+
+                    <button type="button" class="btn btn-info float-right mx-2" id="maxSalary">Max Salary</button>
+                    <button type="button" class="btn btn-info float-right mb-2" id="listOver10">Salary>10</button>
+                    <button type="button" class="btn btn-info float-right mx-2" id="showList">List</button>
+                </div>
+                <table class="table">
+                    <thead>
+                        <td>Id</td>
+                        <td>Name <i class="fa fa-angle-up" style="display:none" id="upName"></i><i class="fa fa-angle-down"
+                                id="downName"></i></td>
+                        <td>Email</td>
+                        <td>Phone</td>
+                        <td>DOB <i class="fa fa-angle-up" style="display:none" id="upAge"></i><i class="fa fa-angle-down"
+                                id="downAge"></i></td>
+                        <td>Base Salary</td>
+                        <td>Days</td>
+                        <td>Title</td>
+                        <td>Extra benefit</td>
+                        <td>Net Salary <i class="fa fa-angle-up" style="display:none" id="upNetSalary"></i><i class="fa fa-angle-down"
+                                id="downNetSalary"></i></td>
+                        <td></td>
+                    </thead>
+                    <tbody id="txtTbody"></tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script src="./js/Employee.js"></script>
+    <script src="./js/EmployeeList.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

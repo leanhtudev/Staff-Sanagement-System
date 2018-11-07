@@ -1,0 +1,8 @@
+.tableDiv{
+    height: 525px;
+    overflow: scroll;
+}
+.text-red{
+    color:red;
+    font-size: 0.8rem;
+}
